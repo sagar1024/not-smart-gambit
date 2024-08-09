@@ -1,0 +1,108 @@
+List of c++ files that we need to build this chess engine
+
+
+Backend Directory: backend/src/
+Piece.h
+Defines the Piece structure, including types and colors.
+Piece.cpp
+Implements any methods related to the Piece class (if needed).
+
+Move.h
+Defines the Move structure for representing chess moves.
+Move.cpp
+Implements any methods related to the Move class (if needed).
+
+ChessBoard.h
+Declares the ChessBoard class with methods for setting up the board, generating moves, and executing moves.
+ChessBoard.cpp
+Implements methods for the ChessBoard class, including move generation and execution.
+
+main.cpp
+The entry point of the program for testing the chess engine.
+
+GameEngine.h (optional)
+Defines the GameEngine class for managing game state, player turns, and game rules.
+GameEngine.cpp (optional)
+Implements methods for the GameEngine class.
+
+AIPlayer.h (optional)
+Defines an AIPlayer class for implementing basic AI algorithms (like Minimax) or reinforcement learning.
+AIPlayer.cpp (optional)
+Implements methods for the AIPlayer class.
+
+Utilities.h (optional)
+Defines utility functions or classes used throughout the project.
+Utilities.cpp (optional)
+Implements utility functions or classes.
+
+
+Explanation of the code in the files -
+
+Piece.h:
+Defines PieceType and PieceColor enums to represent the type and color of a chess piece.
+Defines the Piece class with private member variables for PieceType and PieceColor.
+Provides public methods to get and set the type and color of the piece, and a method to convert the piece to a string representation.
+
+Piece.cpp:
+Implements the constructor and methods defined in Piece.h.
+The toString method returns a human-readable representation of the piece.
+
+Move.h:
+Defines the Move class with private member variables for the start and end coordinates of the move (fromRow, fromCol, toRow, toCol) and the piece being moved.
+Provides public methods to get and set these values and a method to convert the move to a string representation.
+
+Move.cpp:
+Implements the constructor and methods defined in Move.h.
+The toString method returns a human-readable representation of the move, including the start and end coordinates and the piece involved.
+
+ChessBoard.h:
+Declares the ChessBoard class and its methods.
+Includes methods to set up the board (setupBoard), generate moves (generateMoves), execute moves (executeMove), and convert the board to a string (boardToString).
+Defines private helper methods for generating moves for different pieces and a method to check board boundaries.
+
+ChessBoard.cpp:
+Implements the ChessBoard class methods.
+Initializes the board with starting positions for pieces in the setupBoard method.
+Includes placeholders for move generation methods (generateKnightMoves, generateBishopMoves, etc.), which you need to implement.
+The executeMove method updates the board based on a move and ensures moves are within bounds.
+
+GameEngine.h:
+Declares the GameEngine class with methods to start a new game (startGame), make a move (makeMove), get the board state (getBoardState), and check if the game is over (isGameOver).
+Includes private methods for validating moves (isValidMove), switching players (switchPlayer), and detecting checkmate and stalemate (checkCheckmate and checkStalemate).
+
+GameEngine.cpp:
+Implements the methods declared in GameEngine.h.
+The startGame method initializes the board and sets the starting player.
+The makeMove method validates and executes a move, switching the player if the move is valid.
+The getBoardState method retrieves the current board state as a string.
+The isValidMove method is a placeholder where move validation logic should be added.
+The switchPlayer method toggles between the white and black players.
+The checkCheckmate and checkStalemate methods are placeholders for implementing checkmate and stalemate detection.
+
+AIPlayer.h:
+Declares the AIPlayer class with methods to get the best move (getBestMove), evaluate the board (evaluateBoard), generate possible moves (generatePossibleMoves), and select a random move (selectRandomMove).
+Contains a private member color to store the AI player's color.
+
+AIPlayer.cpp:
+Implements the methods declared in AIPlayer.h.
+The getBestMove method generates possible moves and selects a random move as a placeholder strategy.
+The evaluateBoard method is a placeholder for board evaluation logic.
+The generatePossibleMoves method loops through all pieces of the AI’s color and generates moves for each piece.
+The selectRandomMove method randomly selects a move from the list of possible moves using the <random> library.
+
+Note -
+Evaluation Function: In a real AI, the evaluateBoard function would analyze the board position and assign a score to determine the best move based on various factors (e.g., material balance, piece activity).
+Move Selection: The random move selection is a placeholder. Advanced AI would use algorithms like Minimax with Alpha-Beta Pruning to select the best move.
+
+Utilities.h:
+positionToNotation: Converts board coordinates (row, col) to standard chess notation (e.g., e4).
+notationToPosition: Converts chess notation (e.g., e4) to board coordinates (row, col).
+printMoves: Prints out a list of moves in a human-readable format.
+isValidPosition: Validates that the given position is within the bounds of the chessboard.
+
+Utilities.cpp:
+positionToNotation: Converts numeric coordinates to chess notation, using ASCII values for file and rank.
+notationToPosition: Converts chess notation to numeric coordinates, with basic validation for position length and range.
+printMoves: Iterates through a vector of Move objects and prints each move. The Move class should have a toString() method for this to work.
+isValidPosition: Checks if the given row and column are within the bounds of the chessboard (0 to 7).
+
