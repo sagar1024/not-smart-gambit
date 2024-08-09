@@ -5,9 +5,8 @@
 - **Dynamic Difficulty Adjustment**: The engine assesses the player's strength and adjusts the difficulty level accordingly, offering a challenging experience for all skill levels.
 - **Player Weakness Tracking**: Tracks the player's weaknesses over time and offers targeted advice to help improve specific areas of their game.
 - **Style Emulation**: The engine can emulate different playing styles, from aggressive to defensive, allowing players to practice against a variety of strategies.
-- **Move Explanations**: Provides explanations for each move, helping players understand the reasoning behind the engine's decisions.
-- **Color Selection**: Players can choose whether they want to play as White or Black before each game.
 - **AI Player**: The engine includes an AI player that makes decisions based on a combination of randomization and evaluation, making it unpredictable and challenging.
+- **Move Explanations**: Provides explanations for each move, helping players understand the reasoning behind the engine's decisions.
 
 ## How It Works
 The engine uses a combination of standard chess algorithms, reinforcement learning, and customized heuristics to evaluate board positions and generate optimal moves. The difficulty adjustment is achieved by analyzing the player's past games and modifying the AI's evaluation function and search depth accordingly.
