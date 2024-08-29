@@ -1,3 +1,5 @@
+#### This is an old repo of this project, a new one has been created.
+
 # Smart Gambit
 **Smart Gambit** is an advanced C++ chess engine designed to provide an engaging and educational experience for chess players of all skill levels. This chess engine is built to dynamically adjust its difficulty based on the player's strength, track players' weaknesses, and offer tailored suggestions for improvement. It also emulates various playing styles and provides detailed explanations for each move, making it an ideal tool for both casual players and serious learners.
 
